@@ -22,5 +22,12 @@
   "homepage": "https://github.com/sGr1goryV/brain-games#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@eslint/create-config": "^1.10.0",
+    "@eslint/js": "^9.33.0",
+    "@stylistic/eslint-plugin": "^5.2.3",
+    "eslint": "^9.33.0",
+    "globals": "^16.3.0"
   }
 }
