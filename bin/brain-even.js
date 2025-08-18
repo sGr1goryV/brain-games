@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from "readline-sync";
+import _ from 'lodash';
 
-
-const generateRandomNumber = () => {
-    return Math.floor(Math.random() * 99) + 2;
-}
 
 const gameIsEvenNumber = () => {
     console.log('Welcome to the Brain Games!');
@@ -12,7 +9,7 @@ const gameIsEvenNumber = () => {
 
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
     for (let i = 0; i < 3; i += 1) {
-        const number = generateRandomNumber();
+        const number = _.random(2, 100);
 
         console.log(`Question: ${number}`);
         const answer = readlineSync.question('Your answer: ');
