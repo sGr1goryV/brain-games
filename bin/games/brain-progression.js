@@ -25,7 +25,7 @@ const brainProgression = () => {
 
     for (let i = 0; i < 3; i += 1) {
         const progression = makeProgression();
-        const randomIndex = Math.floor(Math.random() * progression.length);
+        const randomIndex = _.random(0, progression.length - 1);
 
         const randomItem = progression[randomIndex];
         progression[randomIndex] = '..';
