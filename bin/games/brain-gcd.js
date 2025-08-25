@@ -13,7 +13,7 @@ const gcd = () => {
     let a = _.random(0, 50);
     let b = _.random(0, 50);
 
-    const question = readlineSync.question(`Question: ${a} ${b} `);
+    const question = readlineSync.question(`Question: ${a} ${b}\n\nYour answer: `);
     const answer = Number(question);
 
     while (b !== 0) {
