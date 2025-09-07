@@ -12,24 +12,24 @@ const calc = () => {
     const number2 = _.random(0, 10);
 
     const expressions = [
-      {'+': number1 + number2},
-      {'-': number1 - number2},
-      {'*': number1 * number2}
+      { '+': number1 + number2 },
+      { '-': number1 - number2 },
+      { '*': number1 * number2 }
     ]
 
     const randomIndexExpretion = _.random(0, expressions.length - 1);
     const randomExpression = expressions[randomIndexExpretion];
-    
+
     const sign = Object.keys(randomExpression);
     const resultExpretion = Object.values(randomExpression);
 
-    const userAnswer = readlineSync.question(`Question: ${number1} ${sign[0]} ${number2} = `);
+    const userAnswer = readlineSync.question(`Question: ${number1} ${sign[0]} ${number2}\nYour answer: `);
     const changeTypeOfUserAnswer = Number(userAnswer);
 
     if (changeTypeOfUserAnswer === resultExpretion[0]) {
       console.log('Correct!');
     } else {
-      console.log(`Your answer: ${userAnswer}\n'${userAnswer}' is wrong answer. Correct answer was '${resultExpretion}'\nLet's try again, ${name}`);
+      console.log(`'${userAnswer}' is wrong answer. Correct answer was '${resultExpretion}'\nLet's try again, ${name}!`);
       return;
     }
   }

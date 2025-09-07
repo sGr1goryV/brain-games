@@ -6,8 +6,8 @@ import nameGreeting from "../../src/index.js";
 
 const gameIsEvenNumber = () => {
     const name =  nameGreeting();
-
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
+    
     for (let i = 0; i < 3; i += 1) {
         const number = _.random(2, 100);
 
@@ -25,7 +25,7 @@ const gameIsEvenNumber = () => {
             console.log(`'${answer}' is wrong answer.\nLet's try again, ${name}`);
             return;
         }
-        console.log(`Congratulations, ${name}!`);
     }
+    console.log(`Congratulations, ${name}!`);
 }
 gameIsEvenNumber();

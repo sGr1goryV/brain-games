@@ -21,6 +21,7 @@ function isPrime(n) {
 
 const brainPrime = () => {
     const name = nameGreeting();
+    console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
     for (let i = 0; i < 3; i += 1) {
         const randomNumber = _.random(0, 50);
@@ -28,8 +29,8 @@ const brainPrime = () => {
 
         if (isPrime(randomNumber) === answer) {
             console.log('Correct!');
-        } else {
-            console.log(`'${answer}' is wrong answer! is wrong answer. Correct answer was '${randomNumber}'\nLet's try again, ${name}`);
+        } else if (isPrime(randomNumber)) {
+            console.log(`'${answer}' is wrong answer. Correct answer was '${isPrime(randomNumber)}'.\nLet's try again, ${name}!`);
             return;
         }
     }
